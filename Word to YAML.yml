@@ -1,0 +1,68 @@
+name: Document Conversion Request: Word to YAML
+description: >
+  Convert an attached Word document (.docx) into YAML format (.yml).
+  Ensure structure and readability tailored for prompt libraries, LLM agent input, or enterprise configuration management.
+  Optimize output for easy integration with GitHub repositories and modern LLM workflows.
+
+document_context:
+  document_type: "<specify type, e.g., technical documentation, user guide, report>"
+  target_audience: "<specify, e.g., developers, end users, stakeholders>"
+  primary_use_case: "<specify, e.g., prompt library, config management, repo automation, internal wiki>"
+
+conversion_requirements:
+  content_preservation:
+    - Retain all original text and meaning within YAML fields.
+    - Preserve logical hierarchy by nesting and key names.
+    - Convert tables, lists, and formatting elements into structured YAML blocks or arrays.
+  yaml_formatting_standards:
+    - Use explicit key-value mappings for headings, sections, and blocks.
+    - Represent tables as lists of objects (array of mappings).
+    - For multiline text, use the "|" syntax.
+    - Maintain consistent indentation (spaces only), no tabs.
+    - Validate YAML structure with standard parsers before saving.
+  schema_guidance:
+    - Main sections as top-level keys (e.g., metadata, content, examples).
+    - Subsections, lists, and tables as nested fields or arrays.
+    - Example code blocks as string literals (multiline, if needed).
+    - Include an "examples" key for embedded code or sample data, formatted per YAML standards.
+
+output_specification:
+  output_file_extension: ".yml"
+  output_file_name: "<suggest clear, descriptive filename based on context, e.g., document-conversion-result.yml>"
+  output_use_case: |
+    - Ready to use in GitHub prompt libraries, config stores, or automation pipelines.
+    - Easily parsed for downstream LLM or agent tasks.
+
+example_structure:
+  metadata:
+    title: "<document title>"
+    author: "<author>"
+    last_modified: "<date>"
+  content:
+    sections:
+      - heading: "<Section Title>"
+        body: |
+          "<Section content here, preserving original meaning and structure.>"
+        tables:
+          - name: "<Table Name/Context>"
+            columns:
+              - "<Column Name 1>"
+              - "<Column Name 2>"
+            rows:
+              - [ "Row Value 1", "Row Value 2" ]
+        lists:
+          - "<List Item 1>"
+          - "<List Item 2>"
+      # ...repeat for additional sections/subsections
+  examples:
+    - name: "SampleCode"
+      language: "<language>"
+      code: |
+        "<Insert code block here, as a multiline string.>"
+
+tags:
+  - word-to-yaml
+  - document-conversion
+  - llm-prompt
+  - github-automation
+  - best-practices
