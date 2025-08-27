@@ -1,0 +1,86 @@
+## Meta-Prompt Template for Advanced AI Agents
+(compare, highlight, explain config differences with compliance, accuracy, and safety)
+
+## Overview
+This template synthesizes current best practices for advanced prompt engineering (internally and externally cited) with Glean agent development guidance. It ensures that prompts for document-comparing agents drive accuracy, completeness, safety, and compliance. It is designed to be copy-pasted into Glean Agent steps or adapted to other agentic frameworks.
+The structure below is modular: follow it step by step across your agent’s workflow (Trigger, Web Search, Company Search, Think, Respond). Each step is engineered for role clarity, stepwise reasoning, validation checkpoints, and compliance guardrails. ¹ ²
+
+## Step 1: Trigger Step
+(Define variables and expected user input)
+### Inputs:
+- Source Config File
+- New Config File to Compare
+- Solution ID (for Solution-specific context/rules)
+- Context: Description of how SKUs are used in your environment, business criticality, and any known compliance or accuracy requirements
+### User Instruction:
+“Paste both configuration files (source and new) below. Clearly define the desired outcome: e.g., ‘Show all differences between these configs in a table, highlighting changes and meaningful gaps in the second file. If possible, explain the business impact or risk of these gaps based on our SKU context. Challenge assumptions or unverified alignments. Use a factual tone.’”
+### Constraints/Limitations:
+“If ambiguous data or format differences arise, escalate for human review. If data appears out-of-date or incomplete, flag and recommend revalidation before decision-making.”
+
+## Step 2: Web Search Step
+(Supplement with current best practices, standards, or public documentation)
+### Perform targeted web/document searches to:
+- Validate default behaviors for comparing configurations with Solution IDs.
+- Gather standards for SKU usage, compliance, and industry best practices.
+- Identify emerging risks, accuracy or completeness benchmarks, and known challenges.
+- Integration Tip: Glean Agents can route this automatically or allow for configurable sources based on Solution ID or SKU context.
+
+## Step 3: Company Search Step
+(Leverage internal knowledge and governance)
+### Search internal repositories for:
+- Solution-specific requirements, known issues, or policy standards.
+- Recent compliance updates, deployment notes, or product-specific documentation.
+- Historical incident reports related to config drift, SKU mismatches, or compliance gaps.
+- Integration Tip: Tag results by relevance (e.g., config deltas, risk notes, policy change)
+
+## Step 4: Think Step
+(Agentic, stepwise reasoning with built-in safety/quality logic)
+### Role Assignment:
+“You are a factual, compliance-focused config analyst Agent. Your goals: maximize accuracy, completeness, and safety. Challenge assumptions, validate source evidence, and flag risks.”
+### Process Flow:
+- Parse both configs grounding each field in SKU context.
+- Identify and record every difference (added, removed, or modified settings).
+- For each difference, cross-reference best practices, standards, and Solution ID guidance.
+- Challenge any implicit assumptions (e.g., default vs. customer-overridden values) and note gaps in information.
+- If the business meaning or risk of a difference cannot be confidently inferred, escalate for review—do not speculate.
+- Validate that all outputs respect compliance, security, and safety mandates for sensitive data disclosures.
+### Self-Critique & Output Validation:
+“After stepwise comparison, review the output for logical consistency, factual accuracy, and compliance alignment. If uncertainties or ambiguities are present, highlight them clearly in the response table or a dedicated ‘Limitations’ section.”
+
+## Step 5: Respond Step
+(Structured, actionable output with compliance/safety checks)
+### Output Table:
+### Create a table with these columns:
+- Config Section/Setting
+- Old Value (Source)
+- New Value (Target)
+- Difference Highlight (e.g., “REMOVED,” “ADDED,” “CHANGED”)
+- Business Impact / Risk (If confidently derived)
+- Compliance or Safety Note (If applicable)
+- Solution ID Reference or Rule (if matched)
+- Comment / Open Question
+### Summary Section:
+- List any meaningful gaps or critical omissions in the new config relative to the source (call out potential risks).
+- Specifically flag items that may have compliance, security, or operational impact according to company or Solution ID policy.
+### Limitations Section:
+- Explicitly state any uncertainties, unsupported inferences, or steps requiring further review.
+- “If assumptions were challenged but could not be resolved programmatically, document them here for review.”
+### Compliance/Safety Check:
+“Verify that the table and summary do not leak non-permissible sensitive data and that recommendations align with regulatory and internal guidelines.”
+
+### Repeatability/Integration Guidance (for Glean/Enterprise Agents):
+- Use modular, stepwise prompts for each Agentic step (see above breakup).
+- Apply cited best practices for memory management, LLM selection, chain-of-thought reasoning, and branch handling when building agents in Glean or other platforms
+- Evaluate outputs with internal eval sets and LLM judges for accuracy, safety, and compliance; refine as needed before deployment.
+- Ensure pre/post-deployment reviews for changed docs or requirements, updating your agent’s prompts as context or risk landscape shifts.
+
+## Appendix: Advanced Prompt Engineering Methods Incorporated
+### Stepwise (chain-of-thought) reasoning for transparency and error reduction
+- Role definition for alignment and tone control ³
+- Explicit compliance and safety guardrails (input validation, output review, escalation triggers) ⁴ ⁵
+Context-rich prompting (SKU/business context, Solution ID mapping, delta analysis) ⁶
+- Memory management and self-consistency checks for multi-step workflows ²
+Output structuring and revalidation (table format, summary, limitations, compliance checks)
+- Escalation path for ambiguity or compliance issues, ensuring no unsafe or unsupported inferencing
+- Output in .md format for each step
+
