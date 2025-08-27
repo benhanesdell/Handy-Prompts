@@ -1,37 +1,33 @@
 # Document Conversion Request: Word to Markdown
 
 ## Objective
-Convert the attached Word document to Markdown format while preserving content structure and improving readability for GitHub.
+Convert the attached Word document into Markdown format, ensuring the structure and readability are optimized for **[specify platform/use case, e.g., GitHub, internal wiki, static site generator]**.
+
+---
 
 ## Document Context
 - **Document Type**: [e.g., technical documentation, user guide, report]
 - **Target Audience**: [e.g., developers, end users, stakeholders]
 - **Primary Use Case**: [e.g., GitHub documentation, internal wiki, web publication]
 
+---
+
 ## Conversion Requirements
 
 ### Content Preservation
-- Maintain all original text content and meaning
+- Retain all original text and meaning
 - Preserve hierarchical structure (headings, subheadings)
 - Convert tables, lists, and formatting elements appropriately
 
 ### Markdown Formatting Standards
-- Use standard Markdown syntax (CommonMark compatible)
-- Apply consistent heading hierarchy (# ## ### ####)
-- Format code blocks with appropriate syntax highlighting
-- Convert images to proper Markdown image syntax with alt text
-
-### Enhancement Requests
-- Improve readability through better paragraph breaks
-- Add table of contents if document is lengthy (>5 sections)
-- Optimize formatting for [specify target platform if relevant]
-- [Add any specific formatting preferences]
-
-## Deliverables
-Please provide:
-1. The converted Markdown file
-2. Brief summary of major formatting changes made
-3. List of any elements that couldn't be directly converted
-
-## Quality Criteria
-- All content accurately 
+- Use **CommonMark-compatible** Markdown syntax
+- Apply consistent heading hierarchy:
+  - `#` for main titles
+  - `##` for sections
+  - `###` for subsections
+  - `####` for sub-subsections
+- Format code blocks using triple backticks:
+  ```markdown
+  ```language
+  // code here
+  ```
