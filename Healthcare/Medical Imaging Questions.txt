@@ -1,0 +1,23 @@
+Business: 
+1. What clinical discipline is being discussed (Radiology, Cardiology, Digital Pathology, etc.)?
+2. Are you having discussions on consolidation for an Enterprise Imaging strategy (such as VNA)?
+3. Have you engaged with both radiology and IT staff, or just one group?
+4. Are you a current Dell customer or is this a competitive takeout?
+5. What are your 2- and 5-year plans for the medical imaging environment and overall clinical strategy?
+6. Does your organization have a preferred reseller?
+Technology: 
+7. Who is the PACS(s) ISV (Independent Software Vendor)?
+8. Does your organization have cloud-first mandates?
+9. How much data is required for on-prem cache/short-term storage?
+10. Are you replacing the PACS or upgrading the current ISV version?
+11. Do you have an ILM (Information Lifecycle Management) policy for PACS data?
+12. Do you have a data protection strategy for DICOM data?
+13. What is your workflow for medical imaging (central repository or distributed)?
+Operations:
+14. What is your annual exam rate (number of exams performed per year)?
+15. Are you interested in a managed service for your hardware stack?
+Financial: 
+16. Is this a technology refresh opportunity or a discovery for trends in medical imaging?
+17. Are you interested in managed services for your hardware stack?
+
+- If a question fits more than one category (as listed), only ask it once, tailoring follow-up based on the context in which it is answered.
