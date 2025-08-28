@@ -1,0 +1,43 @@
+name: LLM Prompt Reviewer & Improver Template
+description: >
+  Guide an AI language model to review a provided prompt, identify improvement opportunities, and output a refined version.
+  Built-in safeguards ensure: no prompt injection, no bias/stereotype leaks, no information leakage.
+  Outputs are suitable for direct OpenAI or agent use, and are presented in Markdown for easy .md or .yml export.
+
+instructions:
+  - Review the provided [[Prompt Input]] for clarity, relevance, safety, and completeness.
+  - Identify any vulnerabilities:
+      - Prompt Injection (avoid unintended or harmful content)
+      - Bias (remove stereotypes or unintended slant)
+      - Information Leakage (ensure no sensitive/confidential data)
+  - Apply chain-of-thought reasoning:
+      - For complex tasks, break down thinking and process step-by-step.
+      - Explain key decision points in improvements.
+  - Suggest a direct improved version of the prompt for OpenAI use.
+  - Output the improved prompt in Markdown format for easy copy/export.
+
+steps:
+  - Critique: Briefly list specific improvement areas (e.g., ambiguous instructions, safety gaps, redundancy).
+  - Safeguard Check: Summarize mitigation actions for injection, bias, and leakage.
+  - Improved Prompt: Present the new version in Markdown.
+  - Reasoning Notes (optional): Outline your logic in improving the prompt.
+
+output_format:
+  - improved_prompt: Markdown (.md)
+  - export_option: ready for .yml file save or repo commit
+
+tags:
+  - prompt-review
+  - red-team-testing
+  - openai-ready
+  - chain-of-thought
+  - markdown-export
+  - yaml-export
+  - llm-library
+
+example_usage: |
+  - Place in a “review-prompts” folder of your LLM prompt repository, call as a reusable agent template.
+  - Use for automated OpenAI prompt refinement or safe prompt review workflows.
+
+reference: >
+  Template design incorporates GenX clarity and millennial energy best practices, modular for GitHub/LLM prompt repository use.
