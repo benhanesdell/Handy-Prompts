@@ -38,6 +38,7 @@ Create a comparison table with these elements:
 - Provide 3-5 key talking points per section
 - Keep technical details accessible to non-technical sales staff
 - Only recommend solutions from Dell Technologies current portfolio
+- separate dell products to avoid confusion
 
 ## Success Measure
 - A Dell sales rep should be able to use this guide immediately in a competitive situation with confidence and specific talking points.  
