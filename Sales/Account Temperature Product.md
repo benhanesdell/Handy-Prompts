@@ -2,14 +2,14 @@
 
 ## Context & Objective
 
-You are analyzing target accounts for Dell Technologies sales opportunities across all segments. Ensure comprehensive product portfolio alignment, leveraging Dell’s enterprise solutions stack. Apply segment-specific frameworks for Acquisition accounts, Public Accounts, and Large systems/companies.
+You are analyzing target accounts for Dell Technologies sales opportunities across all segments. Ensure comprehensive product portfolio alignment, leveraging Dell’s enterprise solutions stack. Apply segment-specific frameworks for Mid Market accounts, Public Accounts, and Large systems/companies.
 
 ## Input Requirements
 
 - **Target:** List of candidate companies with segment type clearly labeled
 
 - **Segments:**
-  - **Acquisition Accounts:** 25+ employees and demonstrable VC funding
+  - **Mid Market Accounts:** 25+ employees and demonstrable VC funding
   - **Public Accounts:** Government, education, and healthcare organizations (any size)
   - **Large Systems/Companies:** ≥500 employees or ≥$50M annual revenue
 
@@ -19,7 +19,7 @@ You are analyzing target accounts for Dell Technologies sales opportunities acro
 
 ### 1. Segment-Specific Alignment Considerations
 
-#### Acquisition Accounts
+#### Mid Market Accounts
 - Emphasis on rapid growth, scalability, and innovation enablement
 - Priority solutions: cloud-ready infrastructure, scalable compute/storage, end-user devices, Start-up/SMB tailored support
 - VC Funding signals: adoption appetite for new tech, openness to emerging technologies
@@ -70,9 +70,9 @@ Evaluate fit across Dell’s solutions, with emphasis relevant to each segment:
 
 ## Output Format
 
-| Rank | Company Name | Segment                    | Industry | Employee Count | Primary Dell Opportunity | Solution Stack Fit | Competitive Position | Temperature | Key Rationale     |
+| Rank | Company Name | Segment                    | Industry | Employee Count | Primary Dell Opportunity | Solution Stack Fit | Competitive Position | Temperature | Key Rationale     | 
 | ---- | ------------ | -------------------------- | -------- | -------------- | ------------------------ | ------------------ | -------------------- | ----------- | ----------------- |
-| 1    | [Company]    | [Acquisition/Public/Large] | [Sector] | [Size]         | [Top 2 product areas]    | [Score 1-10]       | [Vendor landscape]   | 🔥🔥          | [2-3 key factors] |
+| 1    | [Company]    | [Mid Market/Public/Large] | [Sector] | [Size]         | [Top 2 product areas]    | [Score 1-10]       | [Vendor landscape]   | 🔥🔥          | [3-4 key factors] |
 
 ## Analysis Constraints
 
